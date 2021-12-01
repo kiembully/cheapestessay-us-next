@@ -1,0 +1,182 @@
+@import "../../../styles/variables.scss";
+.services {
+  .nav {
+    margin-bottom: 90px;
+    .nav-item {
+      .nav-link {
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        color: $white-color;
+        font-size: 25px;
+        font-weight: 700;
+        background: $theme-color;
+        margin: 0 40px;
+        position: relative;
+        text-align: center;
+        line-height: 42px;
+        cursor: pointer;
+        span {
+          position: relative;
+        }
+        &.active {
+          background: $theme-color;
+          &:before {
+            content: "";
+            width: 80px;
+            height: 60px;
+            background-image: url($bg-base-path + "/how-it-works-arrow.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            bottom: -30px;
+            left: -10px;
+            z-index: 0;
+          }
+        }
+      }
+    }
+    &.show {
+      & > .nav-link {
+        background: $white-color;
+        border-color: $secondary-color;
+      }
+    }
+  }
+  .serviceImg {
+    img {
+      height: 250px;
+    }
+  }
+  .service-box {
+    background: $white-color;
+    border-radius: 10px;
+    width: 350px;
+    padding: 40px;
+    position: relative;
+    margin: 0 auto;
+    p {
+      margin-bottom: 0;
+    }
+    &::before {
+      content: "";
+      background-image: url($bg-base-path + "/dot-4.svg");
+      width: 105px;
+      height: 95px;
+      bottom: -45px;
+      left: -34px;
+      position: absolute;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+    .services {
+      width: 70px;
+      height: 70px;
+      background-color: $secondary-color;
+      color: $theme-color;
+      font-size: 25px;
+      display: inline-block;
+      border-radius: 50px;
+      text-align: center;
+      line-height: 54px;
+      font-weight: 700;
+      border: 8px solid $body-color;
+      position: absolute;
+      top: -30px;
+      left: -20px;
+      z-index: 2;
+    }
+    .title {
+      font-size: 20px;
+      color: $theme-color;
+      font-weight: 700;
+      line-height: 24px;
+    }
+    .desc {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  section.services {
+    padding-bottom: 80px;
+    .service-box {
+      padding: 40px;
+      margin-bottom: 20px;
+      width: 330px;
+    }
+    .nav {
+      .nav-item {
+        .nav-link {
+          margin: 0 25px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  section.services {
+    .nav {
+      .nav-item {
+        .nav-link {
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+          line-height: 34px;
+          &.active {
+            &::before {
+              width: 65px;
+              height: 60px;
+              bottom: -36px;
+              left: -8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  section.services {
+    padding-bottom: 30px;
+    .service-box {
+      width: 100%;
+      .title {
+        font-size: 18px;
+      }
+      .services {
+        left: -16px;
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+        line-height: 44px;
+      }
+      .desc {
+        margin-top: 15px;
+      }
+    }
+    .nav {
+      margin-bottom: 50px;
+      .nav-item {
+        .nav-link {
+          margin: 0 15px;
+          width: 40px;
+          height: 40px;
+          line-height: 24px;
+          font-size: 18px;
+          &.active {
+            &::before {
+              width: 60px;
+              height: 60px;
+              bottom: -38px;
+              left: -10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

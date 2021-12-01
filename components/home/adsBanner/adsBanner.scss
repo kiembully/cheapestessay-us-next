@@ -1,0 +1,237 @@
+@import "../../../styles/variables.scss";
+.for-new {
+  background-color: $white-color;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  .title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 44px;
+    color: $theme-custom-color;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 3px;
+      background: $secondary-color;
+      bottom: -16px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+  &.orderBanner {
+    background-color: $theme-color;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    &::before,
+    &::after {
+      background-image: url($bg-base-path + "/bannerBorder.svg");
+    }
+    .section-title {
+      color: $white-color;
+      margin-bottom: 20px;
+      &::before {
+        content: none;
+      }
+    }
+    .desc {
+      color: $white-color;
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+  &::before,
+  &::after {
+    content: "";
+    background-image: url($bg-base-path + "/papercuteffact.svg");
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 85px;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &::before {
+    top: -84px;
+  }
+  &::after {
+    bottom: -84px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .banner {
+    position: relative;
+    width: 148px;
+    height: 148px;
+    margin: 0 auto;
+    animation: pulse 2s linear infinite;
+    @-webkit-keyframes pulse {
+      0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+      50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+      to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+      50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+      to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+    .content {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translate(-50%);
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      display: inline-block;
+      line-height: normal;
+      span {
+        font-style: italic;
+      }
+    }
+  }
+  .text {
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    color: $theme-custom-color;
+  }
+  .input-wrpper {
+    width: 80%;
+    margin: 50px auto 0;
+    .input-group {
+      .emailInput {
+        width: calc(100% - 270px);
+        .form-control {
+          padding: 6px 15px;
+          height: 50px;
+          background: #f2f6f8;
+          border: none;
+          color: $black-color;
+          font-size: 16px;
+          border-radius: $border-radius !important;
+        }
+      }
+      .btn {
+        margin-left: 20px !important;
+        width: 250px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .for-new {
+    .title {
+      font-size: 34px;
+      line-height: 32px;
+    }
+    .text,
+    .inner-title {
+      font-size: 20px;
+    }
+    .input-wrpper {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .for-new {
+    .title {
+      font-size: 22px;
+    }
+    &.orderBanner {
+      p {
+        width: 100%;
+      }
+      .mt-5 {
+        margin-top: 2rem !important;
+      }
+    }
+    .input-wrpper {
+      margin-top: 30px;
+      .input-group {
+        .emailInput {
+          width: calc(100% - 170px);
+        }
+        .form-control {
+          height: 40px;
+        }
+        .btn {
+          padding: 8px 20px;
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .for-new {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    &.orderBanner {
+      margin-bottom: 60px;
+      margin-top: 60px;
+      .desc {
+        width: 100%;
+      }
+    }
+    &::before {
+      top: -74px;
+    }
+    &::after {
+      bottom: -74px;
+    }
+    .input-wrpper {
+      width: 100%;
+      .input-group {
+        justify-content: center;
+        .emailInput {
+          width: 100%;
+          .form-control {
+            height: 40px;
+            font-size: 14px;
+            width: 100%;
+          }
+        }
+        .btn {
+          margin-left: 0 !important;
+          width: auto;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

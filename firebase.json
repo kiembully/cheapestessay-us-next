@@ -1,0 +1,13 @@
+{
+  "hosting": [{
+    "target": "firebase-deploy",
+    "trailingSlash": false,
+    "cleanUrls": true,
+    "public": "out", 
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }]
+}

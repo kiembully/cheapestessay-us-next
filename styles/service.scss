@@ -1,0 +1,42 @@
+.bodyMain {
+  .top-navbar {
+    .header-bottom {
+      padding: 0;
+      .serviceLink {
+        li {
+          border-radius: 80px;
+          overflow: hidden;
+          &.active {
+            &::after {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.content-wrapper {
+  padding-top: 0;
+  padding-bottom: 60px;
+}
+.for-new {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.faq {
+  padding-top: 120px !important;
+  padding-bottom: 80px;
+}
+.assService {
+  padding-bottom: 120px;
+}
+@media screen and (max-width: 991px) {
+  .faq {
+    padding-top: 40px !important;
+    padding-bottom: 40px;
+  }
+  .assService {
+    padding-bottom: 60px;
+  }
+}

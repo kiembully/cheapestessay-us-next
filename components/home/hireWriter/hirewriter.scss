@@ -1,0 +1,262 @@
+@import "../../../styles/variables.scss";
+.writer-wrpper {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url($bg-base-path + "/line-testimonial.svg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-size: 100%;
+    top: -20px;
+  }
+  .hire-write-slider {
+    .slick-slider {
+      .slick-dots {
+        bottom: -40px;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+      .slick-slide {
+        padding: 15px 5px;
+        .writerBox {
+          padding: 10px 10px 20px;
+          border-radius: 10px;
+          cursor: pointer;
+          -webkit-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+          .writer-img {
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          &:hover {
+            background: $white-color;
+            -webkit-box-shadow: 0 7px 20px 0px rgba(38, 56, 77, 0.06);
+            box-shadow: 0 7px 20px 0px rgba(38, 56, 77, 0.06);
+            .writer-img {
+              img {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+              }
+            }
+          }
+          .writerDetail {
+            padding-top: 30px;
+            position: relative;
+            margin: 0 10px;
+            .star {
+              img {
+                margin-right: 8px;
+              }
+            }
+            .name {
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 24px;
+              margin-top: 5px;
+              margin-bottom: 20px;
+            }
+            .sub-detail {
+              margin-top: 15px;
+            }
+            .btn {
+              position: absolute;
+              top: 30px;
+              right: 0;
+              background: $theme-color;
+              color: $white-color;
+              &::before {
+                border-color: $theme-color;
+              }
+            }
+            .education {
+              color: #888888;
+              font-size: 14px;
+              margin-bottom: 25px;
+            }
+            .sub-detail {
+              li {
+                display: flex;
+                span {
+                  margin-left: 10px;
+                  margin-right: 10px;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+          .writer-img {
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            -webkit-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+            img {
+              border-radius: 10px;
+              -webkit-transition: all 0.4s ease-in-out;
+              transition: all 0.4s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1500px) {
+  .slick-slider {
+    .slick-arrow {
+      &.slick-prev {
+        left: -40px;
+      }
+      &.slick-next {
+        right: -40px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .writer-wrpper {
+    .hire-write-slider {
+      .slick-slide {
+        .writerBox {
+          .writer-img {
+            height: 250px;
+            img {
+              position: absolute;
+              bottom: 0;
+              top: 0;
+              left: 0;
+              right: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1199px) {
+  .writer-wrpper {
+    .hire-write-slider {
+      .slick-slider {
+        .slick-slide {
+          .writerBox {
+            .writer-img {
+              height: 250px;
+            }
+            .writerDetail {
+              .btn {
+                position: relative;
+                top: 10px;
+                padding: 8px 15px;
+              }
+              .sub-detail {
+                li {
+                  span {
+                    margin-left: 6px;
+                    margin-right: 6px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .slick-arrow {
+          &.slick-prev {
+            left: -10px;
+          }
+          &.slick-next {
+            right: -10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .hire-writer {
+    .desc {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+  }
+  .writer-wrpper {
+    .hire-write-slider {
+      .slick-slider {
+        overflow: hidden;
+        padding-bottom: 30px;
+        .slick-dots {
+          bottom: 6px;
+        }
+        .slick-slide {
+          .writerBox {
+            .writer-img {
+              height: 228px;
+            }
+            .writerDetail {
+              padding-top: 20px;
+              margin: 0 5px;
+              .sub-detail {
+                li {
+                  span {
+                    margin-left: 6px;
+                    margin-right: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .slick-arrow {
+          top: auto;
+          bottom: -1px;
+          &::before {
+            width: 30px;
+            height: 20px;
+            background-size: 30px;
+          }
+          &.slick-next {
+            right: 0;
+          }
+          &.slick-prev {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .writer-wrpper {
+    .hire-write-slider {
+      .slick-slider {
+        .slick-slide {
+          .writerBox {
+            padding: 0;
+            .writerDetail {
+              .education {
+                margin-bottom: 10px;
+              }
+              .sub-detail {
+                flex-wrap: wrap;
+                li {
+                  margin-top: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cheapest-essay-1c1d1": {
+      "hosting": {
+        "firebase-deploy": [
+          "essay-nextjs-us"
+        ]
+      }
+    }
+  }
+}
